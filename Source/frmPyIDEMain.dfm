@@ -3,8 +3,8 @@ object PyIDEMainForm: TPyIDEMainForm
   Top = 115
   HelpContext = 100
   Caption = 'Python Scripter'
-  ClientHeight = 527
-  ClientWidth = 868
+  ClientHeight = 591
+  ClientWidth = 888
   Color = clWindow
   Ctl3D = False
   ParentFont = True
@@ -20,8 +20,8 @@ object PyIDEMainForm: TPyIDEMainForm
   TextHeight = 15
   object StatusBar: TSpTBXStatusBar
     Left = 0
-    Top = 502
-    Width = 868
+    Top = 566
+    Width = 888
     Height = 25
     SizeGrip = False
     object lbStatusMessage: TSpTBXLabelItem
@@ -30,7 +30,7 @@ object PyIDEMainForm: TPyIDEMainForm
     end
     object SpTBXRightAlignSpacerItem1: TSpTBXRightAlignSpacerItem
       Wrapping = twNone
-      CustomWidth = 0
+      CustomWidth = 266
     end
     object SpTBXSeparatorItem22: TSpTBXSeparatorItem
     end
@@ -107,8 +107,8 @@ object PyIDEMainForm: TPyIDEMainForm
   object BGPanel: TPanel
     Left = 9
     Top = 85
-    Width = 850
-    Height = 408
+    Width = 870
+    Height = 472
     Align = alClient
     BevelEdges = []
     BevelOuter = bvNone
@@ -117,19 +117,19 @@ object PyIDEMainForm: TPyIDEMainForm
     object TabControl1: TSpTBXTabControl
       Left = 0
       Top = 0
-      Width = 846
-      Height = 408
+      Width = 866
+      Height = 472
       Align = alClient
       PopupMenu = TabControlPopupMenu
       OnContextPopup = TabContolContextPopup
       ActiveTabIndex = -1
-      Images = vilImages
+      Images = vilImagesABC
       TabDragReorder = True
       TabPosition = ttpBottom
       OnActiveTabChange = TabControlActiveTabChange
       HiddenItems = <>
       object tbiRightAlign: TSpTBXRightAlignSpacerItem
-        CustomWidth = 720
+        CustomWidth = 740
       end
       object tbiTabSep: TSpTBXSeparatorItem
       end
@@ -167,16 +167,16 @@ object PyIDEMainForm: TPyIDEMainForm
       end
     end
     object TabControl2: TSpTBXTabControl
-      Left = 846
+      Left = 866
       Top = 0
       Width = 0
-      Height = 408
+      Height = 472
       Align = alRight
       PopupMenu = TabControlPopupMenu
       Visible = False
       OnContextPopup = TabContolContextPopup
       ActiveTabIndex = -1
-      Images = vilImages
+      Images = vilImagesABC
       TabDragReorder = True
       TabPosition = ttpBottom
       OnActiveTabChange = TabControlActiveTabChange
@@ -220,10 +220,10 @@ object PyIDEMainForm: TPyIDEMainForm
       end
     end
     object TabSplitter: TSpTBXSplitter
-      Left = 846
+      Left = 866
       Top = 0
       Width = 4
-      Height = 408
+      Height = 472
       Cursor = crSizeWE
       Align = alRight
       ParentColor = False
@@ -233,7 +233,7 @@ object PyIDEMainForm: TPyIDEMainForm
   object TBXDockTop: TSpTBXDock
     Left = 0
     Top = 0
-    Width = 868
+    Width = 888
     Height = 85
     PopupMenu = ToolbarPopupMenu
     object MainMenu: TSpTBXToolbar
@@ -242,7 +242,13 @@ object PyIDEMainForm: TPyIDEMainForm
       CloseButton = False
       DockMode = dmCannotFloatOrChangeDocks
       DockPos = 0
-      Images = vilImages
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Images = vilImagesABC
+      ParentFont = False
       ProcessShortCuts = True
       ShrinkMode = tbsmWrap
       TabOrder = 0
@@ -884,7 +890,7 @@ object PyIDEMainForm: TPyIDEMainForm
           end
           object SpTBXItem4: TSpTBXItem
             Action = actPythonSetup
-            Images = vilImages
+            Images = vilImagesABC
           end
         end
         object mnPythonEngines: TSpTBXSubmenuItem
@@ -1041,7 +1047,7 @@ object PyIDEMainForm: TPyIDEMainForm
       Top = 25
       DockPos = -6
       DockRow = 1
-      Images = vilImages
+      Images = vilImagesABC
       TabOrder = 1
       Caption = 'Main Toolbar'
       object tbiFileNewModule: TSpTBXItem
@@ -1108,7 +1114,7 @@ object PyIDEMainForm: TPyIDEMainForm
       Top = 25
       DockPos = 361
       DockRow = 1
-      Images = vilImages
+      Images = vilImagesABC
       TabOrder = 2
       Caption = 'Debug Toolbar'
       object tbiRunRun: TSpTBXItem
@@ -1147,11 +1153,11 @@ object PyIDEMainForm: TPyIDEMainForm
       end
     end
     object ViewToolbar: TSpTBXToolbar
-      Left = 769
+      Left = 789
       Top = 25
       DockPos = 728
       DockRow = 1
-      Images = vilImages
+      Images = vilImagesABC
       TabOrder = 4
       Caption = 'View Toolbar'
       object tbiSelectPythonVersion: TSpTBXSubmenuItem
@@ -1177,7 +1183,7 @@ object PyIDEMainForm: TPyIDEMainForm
       Top = 25
       DockPos = 574
       DockRow = 1
-      Images = vilImages
+      Images = vilImagesABC
       TabOrder = 3
       Caption = 'Editor Toolbar'
       object tbiBrowsePrevious: TSpTBXSubmenuItem
@@ -1231,7 +1237,7 @@ object PyIDEMainForm: TPyIDEMainForm
       CloseButtonWhenDocked = True
       DockPos = -5
       DockRow = 2
-      Images = vilImages
+      Images = vilImagesABC
       Options = [tboDropdownArrow]
       TabOrder = 5
       Visible = False
@@ -1347,7 +1353,7 @@ object PyIDEMainForm: TPyIDEMainForm
       Top = 55
       DockPos = 310
       DockRow = 2
-      Images = vilImages
+      Images = vilImagesABC
       TabOrder = 6
       Visible = False
       Caption = 'User Toolbar'
@@ -1357,17 +1363,17 @@ object PyIDEMainForm: TPyIDEMainForm
     Left = 0
     Top = 85
     Width = 9
-    Height = 408
+    Height = 472
     FixAlign = True
     PopupMenu = ToolbarPopupMenu
     Position = dpLeft
     DoubleBuffered = True
   end
   object TBXDockRight: TSpTBXDock
-    Left = 859
+    Left = 879
     Top = 85
     Width = 9
-    Height = 408
+    Height = 472
     FixAlign = True
     PopupMenu = ToolbarPopupMenu
     Position = dpRight
@@ -1375,8 +1381,8 @@ object PyIDEMainForm: TPyIDEMainForm
   end
   object TBXDockBottom: TSpTBXDock
     Left = 0
-    Top = 493
-    Width = 868
+    Top = 557
+    Width = 888
     Height = 9
     FixAlign = True
     PopupMenu = ToolbarPopupMenu
@@ -1417,7 +1423,7 @@ object PyIDEMainForm: TPyIDEMainForm
     Top = 93
   end
   object TabControlPopupMenu: TSpTBXPopupMenu
-    Images = vilImages
+    Images = vilImagesABC
     Left = 336
     Top = 282
     object mnNewModule2: TSpTBXItem
@@ -1478,19 +1484,19 @@ object PyIDEMainForm: TPyIDEMainForm
     Top = 93
   end
   object SpTBXCustomizer: TSpTBXCustomizer
-    Images = vilImages
+    Images = vilImagesABC
     OnGetCustomizeForm = SpTBXCustomizerGetCustomizeForm
     Left = 280
     Top = 96
   end
   object ToolbarPopupMenu: TSpTBXPopupMenu
-    Images = vilImages
+    Images = vilImagesABC
     LinkSubitems = mnuToolbars
     Left = 40
     Top = 282
   end
   object actlImmutable: TActionList
-    Images = vilImages
+    Images = vilImagesABC
     Left = 112
     Top = 100
     object actViewNextEditor: TAction
@@ -1515,7 +1521,7 @@ object PyIDEMainForm: TPyIDEMainForm
     end
   end
   object actlStandard: TActionList
-    Images = vilImages
+    Images = vilImagesABC
     Left = 42
     Top = 100
     object actViewMainMenu: TAction
@@ -2367,7 +2373,7 @@ object PyIDEMainForm: TPyIDEMainForm
     Left = 394
     Top = 141
   end
-  object vilImages: TVirtualImageList
+  object vilImagesABC: TVirtualImageList
     Images = <
       item
         CollectionIndex = 37
@@ -2955,7 +2961,7 @@ object PyIDEMainForm: TPyIDEMainForm
     PreserveItems = True
     Width = 12
     Height = 12
-    Left = 112
+    Left = 128
     Top = 400
   end
   object vilTabDecorators: TVirtualImageList
@@ -2974,7 +2980,7 @@ object PyIDEMainForm: TPyIDEMainForm
     PreserveItems = True
     Width = 14
     Height = 14
-    Left = 184
+    Left = 264
     Top = 400
   end
 end

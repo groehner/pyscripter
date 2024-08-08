@@ -83,7 +83,7 @@ uses
   VirtualTrees,
   SynUnicode,
   uCommonFunctions,
-  frmIDEDockWin;
+  frmIDEDockWin, Vcl.ToolWin;
 
 type
   TToDoPriority = (tpHigh, tpMed, tpLow, tpDone);
@@ -198,6 +198,8 @@ type
       const S: string; TextSpace: Integer; var Result: string;
       var Done: Boolean);
     procedure ToDoViewHeaderClick(Sender: TVTHeader; HitInfo: TVTHeaderHitInfo);
+    procedure FormAfterMonitorDpiChanged(Sender: TObject; OldDPI,
+      NewDPI: Integer);
   private
     FToDoExpert: TToDoExpert;
     FIsFirstActivation: Boolean;
@@ -905,6 +907,13 @@ begin
   if CanActuallyFocus(ToDoView) then
     ToDoView.SetFocus;
   //PostMessage(ToDoView.Handle, WM_SETFOCUS, 0, 0);
+end;
+
+procedure TToDoWindow.FormAfterMonitorDpiChanged(Sender: TObject; OldDPI,
+  NewDPI: Integer);
+begin
+  inherited;
+OldDPI:= OldDPI + 0;
 end;
 
 procedure TToDoWindow.TodoViewKeyPress(Sender: TObject; var Key: Char);

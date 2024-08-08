@@ -4,6 +4,7 @@ inherited FileExplorerWindow: TFileExplorerWindow
   HelpContext = 420
   Caption = 'File Explorer'
   ClientHeight = 439
+  ClientWidth = 279
   Icon.Data = {
     0000010001001010000000000000680300001600000028000000100000002000
     0000010018000000000000030000000000000000000000000000000000000000
@@ -33,15 +34,23 @@ inherited FileExplorerWindow: TFileExplorerWindow
     000000000000000000000000000000000000000000000000000000000000FBC1
     0000FD410000FBC10000FFFF0000FBC10000FD410000FBC10000FFFF0000001F
     0000001F0000001F0000001F0000001F0000001F0000003F00000FFF0000}
+  ExplicitWidth = 287
+  ExplicitHeight = 466
   TextHeight = 15
   inherited BGPanel: TPanel
+    Width = 279
     Height = 439
+    ExplicitWidth = 271
+    ExplicitHeight = 427
     inherited FGPanel: TPanel
+      Width = 275
       Height = 435
+      ExplicitWidth = 267
+      ExplicitHeight = 423
       object FileExplorerTree: TVirtualExplorerTree
         Left = 0
         Top = 30
-        Width = 223
+        Width = 275
         Height = 405
         Active = False
         Align = alClient
@@ -87,10 +96,11 @@ inherited FileExplorerWindow: TFileExplorerWindow
       object ExplorerDock: TSpTBXDock
         Left = 0
         Top = 0
-        Width = 223
+        Width = 275
         Height = 30
         AllowDrag = False
         DoubleBuffered = True
+        ExplicitWidth = 267
         object ExplorerToolbar: TSpTBXToolbar
           Left = 0
           Top = 0
@@ -173,19 +183,19 @@ inherited FileExplorerWindow: TFileExplorerWindow
     end
   end
   inherited DockClient: TJvDockClient
-    Left = 26
+    Left = 42
     Top = 38
   end
   object VirtualShellHistory: TVirtualShellHistory
     MenuOptions.Images = True
     OnChange = VirtualShellHistoryChange
     VirtualExplorerTree = FileExplorerTree
-    Left = 34
+    Left = 50
     Top = 200
   end
   object ExplorerPopUp: TSpTBXPopupMenu
     Images = vilImages
-    Left = 30
+    Left = 46
     Top = 91
     object mnBack: TSpTBXItem
       Action = actGoBack
@@ -265,7 +275,7 @@ inherited FileExplorerWindow: TFileExplorerWindow
   end
   object ShellContextPopUp: TPopupMenu
     Images = vilImages
-    Left = 30
+    Left = 46
     Top = 148
     object ExploreHere: TMenuItem
       Caption = '&Explore Here'
@@ -292,8 +302,8 @@ inherited FileExplorerWindow: TFileExplorerWindow
   object FileExplorerActions: TActionList
     Images = vilImages
     OnUpdate = FileExplorerActionsUpdate
-    Left = 35
-    Top = 258
+    Left = 51
+    Top = 266
     object actGoBack: TAction
       Category = 'File Explorer'
       Caption = '&Back'
@@ -445,7 +455,7 @@ inherited FileExplorerWindow: TFileExplorerWindow
     PreserveItems = True
     Width = 20
     Height = 20
-    Left = 37
-    Top = 310
+    Left = 45
+    Top = 326
   end
 end

@@ -1142,7 +1142,7 @@ type
     lbPythonVersion: TSpTBXLabelItem;
     SpTBXSeparatorItem23: TSpTBXSeparatorItem;
     lbPythonEngine: TSpTBXLabelItem;
-    vilImages: TVirtualImageList;
+    vilImagesABC: TVirtualImageList;
     icIndicators: TSVGIconImageCollection;
     vilIndicators: TVirtualImageList;
     spiStatusLED: TSpTBXItem;
@@ -1740,7 +1740,7 @@ begin
   Application.OnActionExecute := ApplicationActionExecute;
 
   //  Editor Views Menu
-  GI_EditorFactory.SetupEditorViewsMenu(EditorViewsMenu, vilImages);
+  GI_EditorFactory.SetupEditorViewsMenu(EditorViewsMenu, vilImagesABC);
 
   //Update;
 
@@ -3524,7 +3524,7 @@ begin
     RetranslateComponent(CommandsDataModule);
 
     SetupLanguageMenu;
-    GI_EditorFactory.SetupEditorViewsMenu(EditorViewsMenu, vilImages);
+    GI_EditorFactory.SetupEditorViewsMenu(EditorViewsMenu, vilImagesABC);
 
     GI_EditorFactory.ApplyToEditors(procedure(Editor: IEditor)
     begin
@@ -4817,7 +4817,7 @@ begin
     begin
       List.AddObject(Ed.FileId, TObject(Ed.Form));
     end);
-    ModifiedImageIndex := vilImages.GetIndexByName('Edit');
+    ModifiedImageIndex := vilImagesABC.GetIndexByName('Edit');
     for var I:= 0 to List.Count - 1 do begin
       Editor := TEditorForm(List.Objects[I]).GetEditor;
       MenuItem := TSpTBXItem.Create(Self);

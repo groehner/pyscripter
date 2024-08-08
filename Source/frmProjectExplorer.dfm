@@ -39,22 +39,32 @@ inherited ProjectExplorerWindow: TProjectExplorerWindow
     9C41FC039C41F8019C41F0009C4100009C4100009C4100009C4100009C410000
     9C4100019C4100039C4100079C4100079C4100079C4100079C4100079C41}
   OnShow = FormShow
+  ExplicitWidth = 195
+  ExplicitHeight = 365
   TextHeight = 15
   inherited BGPanel: TPanel
+    ExplicitWidth = 179
+    ExplicitHeight = 326
     inherited FGPanel: TPanel
+      Width = 183
+      Height = 334
+      ExplicitWidth = 175
+      ExplicitHeight = 322
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 223
-        Height = 394
+        Width = 183
+        Height = 334
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitWidth = 175
+        ExplicitHeight = 322
         object ExplorerTree: TVirtualStringTree
           Left = 0
           Top = 30
-          Width = 223
-          Height = 364
+          Width = 183
+          Height = 304
           Align = alClient
           BorderStyle = bsNone
           Header.AutoSizeIndex = -1
@@ -72,7 +82,6 @@ inherited ProjectExplorerWindow: TProjectExplorerWindow
           OnContextPopup = ExplorerTreeContextPopup
           OnDragAllowed = ExplorerTreeDragAllowed
           OnDragOver = ExplorerTreeDragOver
-          OnDragDrop = ExplorerTreeDragDrop
           OnEditing = ExplorerTreeEditing
           OnGetCellText = ExplorerTreeGetCellText
           OnGetImageIndexEx = ExplorerTreeGetImageIndexEx
@@ -90,10 +99,11 @@ inherited ProjectExplorerWindow: TProjectExplorerWindow
         object SpTBXDock1: TSpTBXDock
           Left = 0
           Top = 0
-          Width = 223
+          Width = 183
           Height = 30
           AllowDrag = False
           DoubleBuffered = True
+          ExplicitWidth = 175
           object SpTBXToolbar1: TSpTBXToolbar
             Left = 0
             Top = 0
@@ -509,8 +519,8 @@ inherited ProjectExplorerWindow: TProjectExplorerWindow
     PreserveItems = True
     Width = 18
     Height = 18
-    Left = 56
-    Top = 160
+    Left = 80
+    Top = 176
   end
   object vilImages: TVirtualImageList
     Images = <
@@ -618,8 +628,8 @@ inherited ProjectExplorerWindow: TProjectExplorerWindow
     PreserveItems = True
     Width = 20
     Height = 20
-    Left = 106
-    Top = 160
+    Left = 74
+    Top = 256
   end
   object icProjects: TSVGIconImageCollection
     SVGIconItems = <

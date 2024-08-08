@@ -4,7 +4,7 @@ inherited ToDoWindow: TToDoWindow
   HelpContext = 465
   Caption = 'To Do List'
   ClientHeight = 293
-  ClientWidth = 492
+  ClientWidth = 651
   Icon.Data = {
     0000010001001010000001002000280400001600000028000000100000002000
     0000010020000000000000000000000000000000000000000000000000000000
@@ -40,17 +40,24 @@ inherited ToDoWindow: TToDoWindow
     A3FF000000000000000000000000000000000000000000000000000000000000
     0000000000000000000000000000000000000000000000000000000000000000
     000000000000000000000000000000000000000000000000000000000000}
+  OnAfterMonitorDpiChanged = FormAfterMonitorDpiChanged
+  ExplicitWidth = 659
+  ExplicitHeight = 320
   TextHeight = 15
   inherited BGPanel: TPanel
-    Width = 492
+    Width = 651
     Height = 293
+    ExplicitWidth = 643
+    ExplicitHeight = 281
     inherited FGPanel: TPanel
-      Width = 488
+      Width = 647
       Height = 289
+      ExplicitWidth = 639
+      ExplicitHeight = 277
       object TBXDock1: TSpTBXDock
         Left = 0
         Top = 0
-        Width = 488
+        Width = 647
         Height = 30
         AllowDrag = False
         DoubleBuffered = True
@@ -93,7 +100,7 @@ inherited ToDoWindow: TToDoWindow
       object ToDoView: TVirtualStringTree
         Left = 0
         Top = 30
-        Width = 488
+        Width = 647
         Height = 259
         Align = alClient
         Alignment = taRightJustify
@@ -123,6 +130,9 @@ inherited ToDoWindow: TToDoWindow
         OnShortenString = ToDoViewShortenString
         Touch.InteractiveGestures = [igPan, igPressAndTap]
         Touch.InteractiveGestureOptions = [igoPanSingleFingerHorizontal, igoPanSingleFingerVertical, igoPanInertia, igoPanGutter, igoParentPassthrough]
+        ExplicitTop = 128
+        ExplicitWidth = 488
+        ExplicitHeight = 161
         Columns = <
           item
             Alignment = taCenter
@@ -139,7 +149,7 @@ inherited ToDoWindow: TToDoWindow
             MinWidth = 100
             Position = 1
             Text = 'Description'
-            Width = 203
+            Width = 362
           end
           item
             Layout = blGlyphRight

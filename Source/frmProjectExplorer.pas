@@ -255,7 +255,6 @@ Type
     ProjectNode : TAbstractProjectNode;
   end;
 
-
 procedure TProjectExplorerWindow.actProjectAddRemoteFileExecute(Sender: TObject);
 Var
   Data : PNodeDataRec;

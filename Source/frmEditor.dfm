@@ -33,7 +33,6 @@ object EditorForm: TEditorForm
       OnEnter = FGPanelEnter
       OnExit = FGPanelExit
       ActiveTabIndex = 0
-      Images = PyIDEMainForm.vilImages
       OnActiveTabChange = ViewsTabControlActiveTabChange
       HiddenItems = <>
       object tabSource: TSpTBXTabItem
@@ -41,7 +40,7 @@ object EditorForm: TEditorForm
         Checked = True
       end
       object SpTBXRightAlignSpacerItem1: TSpTBXRightAlignSpacerItem
-        CustomWidth = 470
+        CustomWidth = 512
       end
       object tbiUpdateView: TSpTBXItem
         Caption = 'Update View'
@@ -59,9 +58,9 @@ object EditorForm: TEditorForm
       end
       object tbshSource: TSpTBXTabSheet
         Left = 0
-        Top = 30
+        Top = 25
         Width = 578
-        Height = 388
+        Height = 393
         Caption = 'Source'
         ImageIndex = -1
         TabItem = 'tabSource'
@@ -69,7 +68,7 @@ object EditorForm: TEditorForm
           Left = 2
           Top = 0
           Width = 367
-          Height = 384
+          Height = 389
           HelpContext = 510
           Align = alClient
           Ctl3D = False
@@ -148,7 +147,7 @@ object EditorForm: TEditorForm
           Left = 374
           Top = 0
           Width = 200
-          Height = 384
+          Height = 389
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -206,7 +205,7 @@ object EditorForm: TEditorForm
         object EditorSplitter: TSpTBXSplitter
           Left = 369
           Top = 0
-          Height = 384
+          Height = 389
           Cursor = crSizeWE
           Align = alRight
           ParentColor = False
@@ -217,7 +216,6 @@ object EditorForm: TEditorForm
     end
   end
   object pmnuEditor: TSpTBXPopupMenu
-    Images = PyIDEMainForm.vilImages
     Left = 96
     Top = 32
     object mnEditUndo: TSpTBXItem
@@ -345,7 +343,6 @@ object EditorForm: TEditorForm
     end
   end
   object pmnuViewsTab: TSpTBXPopupMenu
-    Images = PyIDEMainForm.vilImages
     Left = 168
     Top = 32
     object mnUpdateView: TSpTBXItem

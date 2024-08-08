@@ -14,6 +14,8 @@ inherited ConfirmReplaceDialog: TConfirmReplaceDialog
     Height = 98
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 324
+    ExplicitHeight = 97
     object Image1: TImage
       Left = 16
       Top = 16
